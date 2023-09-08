@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phone Hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="d-flex my-5 px-4 justify-content-between">
+        <h1>Welcome to Phone Hunter</h1>
+        <div class="search-option d-inline-flex">
+            <input class="form-control me-3" type="text" name="text" id="search-field" placeholder="Search any Phone">
+            <button id="search-btn" class="btn btn-warning">Search</button>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <div id="card-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+            </div>
+            <div id="no-found-message" class="d-none">
+                <p class="mt-4 text-warning fs-4">
+                    No Data Found.. Please try to search byright keyword</p>
+            </div>
+            <div id="show-all" class="text-center my-4 d-none">
+                <button id="show-all-btn" class="btn btn-success">Show All</button>
+            </div>
+        </section>
+        <section id="spinner-loder" class="d-none">
+            <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="detailsModalLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modal-body" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- <script src="js/hunter.js"></script> -->
+    <script src="js/hunter-update.js"></script>
+</body>
+
+</html>
